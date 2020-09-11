@@ -1,0 +1,13 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: quickstart
+spec:
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true 
+  version: 7.9.0
+  count: 1
+  elasticsearchRef:
+    name: quickstart
